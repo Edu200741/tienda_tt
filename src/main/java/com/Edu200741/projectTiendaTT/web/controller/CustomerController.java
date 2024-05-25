@@ -31,6 +31,7 @@ public class CustomerController {
 
     @DeleteMapping("/delete/{id}")
     public void deleteById(@PathVariable int id){
+
        customerSer.deleteById(id);
     }
 
@@ -39,6 +40,12 @@ public class CustomerController {
       // Clientes cliente = customerMapper.customerDTOToClientes(customerDTO);
        return customerSer.CustomerSave(customerDTO);
 
+    }
+
+    @GetMapping("/Lastname/{Lastname}")
+    public List<CustomerDTO> findByName(@PathVariable String Lastname){
+
+       return customerSer.findByLatsName(Lastname);
     }
 
 

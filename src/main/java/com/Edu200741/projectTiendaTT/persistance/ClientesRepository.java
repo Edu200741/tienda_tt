@@ -37,8 +37,8 @@ public class ClientesRepository implements com.Edu200741.projectTiendaTT.domain.
     }
 
     @Override
-    public CustomerDTO findByName(String name) {
+    public List<CustomerDTO> findByLastName(String Lastname) {
 
-        return (CustomerDTO) customerMapper.toCustomer((List<Clientes>) clienteRepo.findByapellidos(name));
+        return  customerMapper.toCustomer((List<Clientes>) clienteRepo.findByapellidos(Lastname));
     }
 }

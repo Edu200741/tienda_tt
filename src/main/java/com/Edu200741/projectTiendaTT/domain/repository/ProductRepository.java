@@ -9,7 +9,7 @@ public interface ProductRepository {
 
     public List<ProductDTO> getAll();
 
-    public List<ProductDTO> findByCategory(Categoria category);
+    public List<ProductDTO> findByCategory(int id);
 
     public void deleteById(int id);
 

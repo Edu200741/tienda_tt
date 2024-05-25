@@ -28,6 +28,27 @@ public class ProductController {
         return productSer.saveProduct(product);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteById(@PathVariable int id){
 
+        productSer.deleteById(id);
+    }
+
+    @GetMapping("/findCategory/{id}")
+    public List<ProductDTO> findCategoria(@PathVariable int id){
+
+        return productSer.findByCategory(id);
+    }
+
+    @GetMapping("/stock/{id}")
+    public ResponseEntity<List<ProductDTO>> getScareProduct(@PathVariable("id") int id) {
+        List<ProductDTO> products = productSer.getScarseProduct(id);
+        if (products.size() > 0) {
+            return new ResponseEntity<>(products, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+    }
 
 }

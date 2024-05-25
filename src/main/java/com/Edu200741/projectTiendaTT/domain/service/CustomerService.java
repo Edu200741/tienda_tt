@@ -27,9 +27,9 @@ public class CustomerService {
         customerRepo.deleteById(id);
     }
 
-    public CustomerDTO findByName(String name){
+    public List<CustomerDTO> findByLatsName(String Lastname){
 
-        return customerRepo.findByName(name);
+        return customerRepo.findByLastName(Lastname);
     }
 
 

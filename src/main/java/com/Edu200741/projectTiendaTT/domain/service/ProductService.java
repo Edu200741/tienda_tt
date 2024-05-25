@@ -23,8 +23,9 @@ public class ProductService {
         return productRepository.productSave(productDTO);
     }
 
-    public List<ProductDTO> findByCategory(Categoria categoria){
-        return productRepository.findByCategory(categoria);
+    public List<ProductDTO> findByCategory(int id){
+
+        return productRepository.findByCategory(id);
     }
 
     public void deleteById(int id){
@@ -32,6 +33,7 @@ public class ProductService {
     }
 
     public  List<ProductDTO> getScarseProduct(int id){
+
         return productRepository.getScarseProduct(id);
     }
 

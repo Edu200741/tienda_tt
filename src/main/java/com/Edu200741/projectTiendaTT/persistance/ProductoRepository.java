@@ -27,9 +27,9 @@ public class ProductoRepository implements com.Edu200741.projectTiendaTT.domain.
     }
 
     @Override
-    public List<ProductDTO> findByCategory(Categoria category) {
+    public List<ProductDTO> findByCategory(int id) {
 
-        return productMapper.toProducts((List<Producto>) productoRepo.findByIdCategoria(category.getIdCategoria()));
+        return productMapper.toProducts((List<Producto>) productoRepo.findByIdCategoria(id));
     }
 
     @Override

@@ -8,4 +8,5 @@ import java.util.List;
 public interface CompraCrudRepository extends CrudRepository<Compra,Integer> {
 
     List<Compra> findByMedioPago(String medioPago);
+
 }

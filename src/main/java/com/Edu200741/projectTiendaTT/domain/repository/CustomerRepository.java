@@ -11,5 +11,5 @@ public interface CustomerRepository {
     public CustomerDTO CustomerSave(CustomerDTO customerDTO);
     public void deleteById(int id);
 
-    public CustomerDTO findByName(String name);
+    public List<CustomerDTO> findByLastName(String Lastname);
 }
