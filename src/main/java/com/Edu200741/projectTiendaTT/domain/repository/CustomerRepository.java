@@ -1,6 +1,7 @@
 package com.Edu200741.projectTiendaTT.domain.repository;
 
 import com.Edu200741.projectTiendaTT.domain.dto.CustomerDTO;
+import com.Edu200741.projectTiendaTT.persistance.entity.Clientes;
 
 import java.util.List;
 

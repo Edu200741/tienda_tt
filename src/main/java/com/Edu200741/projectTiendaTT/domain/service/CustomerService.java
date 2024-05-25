@@ -1,7 +1,9 @@
 package com.Edu200741.projectTiendaTT.domain.service;
 
+import ch.qos.logback.core.net.server.Client;
 import com.Edu200741.projectTiendaTT.domain.dto.CustomerDTO;
 import com.Edu200741.projectTiendaTT.domain.repository.CustomerRepository;
+import com.Edu200741.projectTiendaTT.persistance.entity.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

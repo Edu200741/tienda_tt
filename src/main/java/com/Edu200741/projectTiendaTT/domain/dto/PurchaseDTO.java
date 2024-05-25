@@ -11,6 +11,7 @@ public class PurchaseDTO {
     private Integer customerId;
     private LocalDateTime date;
     private String paymenth;
+
     private List<CompraProducto> products;
 
     public PurchaseDTO() {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public class PurchaseRepository implements com.Edu200741.projectTiendaTT.domain.repository.PurchaseRepository {
+public class CompraRepository implements com.Edu200741.projectTiendaTT.domain.repository.PurchaseRepository {
 
 
     @Autowired

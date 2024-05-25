@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public class CustomerRepository implements com.Edu200741.projectTiendaTT.domain.repository.CustomerRepository {
+public class ClientesRepository implements com.Edu200741.projectTiendaTT.domain.repository.CustomerRepository {
 
     @Autowired
     private ClientesCrudRepository clienteRepo;

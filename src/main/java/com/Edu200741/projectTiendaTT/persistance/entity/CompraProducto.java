@@ -1,5 +1,6 @@
 package com.Edu200741.projectTiendaTT.persistance.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,10 +16,12 @@ public class CompraProducto {
 
     private Boolean estado;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;

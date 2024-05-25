@@ -14,7 +14,7 @@ public class ProductDTO {
 
     private Integer categoryId;
 
-    private Categoria category;
+    //private Categoria category;
 
     private Integer price;
 
@@ -25,11 +25,11 @@ public class ProductDTO {
     public ProductDTO() {
     }
 
-    public ProductDTO(Integer productId, String name, Integer categoryId, Categoria category, Integer price, Integer stock, Boolean state) {
+    public ProductDTO(Integer productId, String name, Integer categoryId, /*Categoria category,*/ Integer price, Integer stock, Boolean state) {
         this.productId = productId;
         this.name = name;
         this.categoryId = categoryId;
-        this.category = category;
+        //this.category = category;
         this.price = price;
         this.stock = stock;
         this.state = state;
@@ -59,13 +59,13 @@ public class ProductDTO {
         this.categoryId = categoryId;
     }
 
-    public Categoria getCategory() {
+   /* public Categoria getCategory() {
         return category;
-    }
+    }*/
 
-    public void setCategory(Categoria category) {
+/*public void setCategory(Categoria category) {
         this.category = category;
-    }
+    }*/
 
     public Integer getPrice() {
         return price;
