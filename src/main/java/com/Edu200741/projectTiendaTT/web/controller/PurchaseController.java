@@ -6,9 +6,7 @@ import com.Edu200741.projectTiendaTT.domain.service.PurchaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,4 +22,15 @@ public class PurchaseController {
 
         return new ResponseEntity<>(purServ.getAll(), HttpStatus.OK);
     }
+
+    @PostMapping("/save")
+    public PurchaseDTO savePurchase(@RequestBody PurchaseDTO compra){
+        return purServ.purchaseSave(compra);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deletePurchase(@PathVariable int id){
+        purServ.deleteById(id);
+    }
+
 }

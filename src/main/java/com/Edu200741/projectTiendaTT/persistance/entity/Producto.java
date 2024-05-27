@@ -1,8 +1,15 @@
 package com.Edu200741.projectTiendaTT.persistance.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 
 @Entity
 @Table(name = "productos")
@@ -38,108 +45,5 @@ public class Producto {
     @OneToMany(mappedBy = "producto")
     private List<CompraProducto> productos;
 
-    public Producto() {
-    }
 
-    public Producto(Integer idProducto, Categoria categoria, String nombre, Integer idCategoria, String codigoBarras, Integer precioVenta, Integer cantidadStock, Boolean estado, List<CompraProducto> productos) {
-        this.idProducto = idProducto;
-        this.categoria = categoria;
-        this.nombre = nombre;
-        this.idCategoria = idCategoria;
-        this.codigoBarras = codigoBarras;
-        this.precioVenta = precioVenta;
-        this.cantidadStock = cantidadStock;
-        this.estado = estado;
-        this.productos = productos;
-    }
-
-    public Integer getIdProducto() {
-
-        return idProducto;
-    }
-
-    public void setIdProducto(Integer idProducto) {
-
-        this.idProducto = idProducto;
-    }
-
-    public Categoria getCategoria() {
-
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-
-        this.categoria = categoria;
-    }
-
-    public String getNombre() {
-
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-
-        this.nombre = nombre;
-    }
-
-    public Integer getIdCategoria() {
-
-        return idCategoria;
-    }
-
-    public void setIdCategoria(Integer idCategoria) {
-
-        this.idCategoria = idCategoria;
-    }
-
-    public String getCodigoBarras() {
-
-        return codigoBarras;
-    }
-
-    public void setCodigoBarras(String codigoBarras) {
-
-        this.codigoBarras = codigoBarras;
-    }
-
-    public Integer getPrecioVenta() {
-
-        return precioVenta;
-    }
-
-    public void setPrecioVenta(Integer precioVenta) {
-
-        this.precioVenta = precioVenta;
-    }
-
-    public Integer getCantidadStock() {
-
-        return cantidadStock;
-    }
-
-    public void setCantidadStock(Integer cantidadStock) {
-
-        this.cantidadStock = cantidadStock;
-    }
-
-    public Boolean getEstado() {
-
-        return estado;
-    }
-
-    public void setEstado(Boolean estado) {
-
-        this.estado = estado;
-    }
-
-    public List<CompraProducto> getProductos() {
-
-        return productos;
-    }
-
-    public void setProductos(List<CompraProducto> productos) {
-
-        this.productos = productos;
-    }
 }
